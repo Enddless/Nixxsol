@@ -755,3 +755,91 @@ svg * {
   font-size: 16px;
   line-height: 1.4;
 }
+
+.portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+  min-height: 447px;
+}
+.portfolio__body {
+  max-width: 559px;
+  position: relative;
+}
+.portfolio__title {
+  margin-bottom: 5px;
+}
+.portfolio__description {
+  margin-bottom: 27px;
+}
+.portfolio__button {
+  max-width: 186px;
+  width: 100%;
+}
+.portfolio__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  position: absolute;
+  right: 0;
+  max-width: 873px;
+}
+.portfolio__list::-webkit-scrollbar {
+  display: none;
+}
+.portfolio__item {
+  scroll-snap-align: start;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.portfolio__item img {
+  max-width: 650px;
+}
+.portfolio__group-buttons {
+  position: absolute;
+  bottom: -20px;
+  right: -230px;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+}
+.portfolio__group-button {
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.portfolio__group-button-prev, .portfolio__group-button-next {
+  --portfolioIconColor: var(--color-light);
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+}
+.portfolio__group-button-prev svg, .portfolio__group-button-next svg {
+  width: 50%;
+  height: 50%;
+  fill: var(--portfolioIconColor);
+}
