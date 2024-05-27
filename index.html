@@ -3,13 +3,71 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./styles/styles.css">
   <title>Nixxsol</title>
 </head>
 
 <body>
-  123
+  <header class="header">
+    <div class="header__inner container">
+      <a href="/" class="header__logo logo">
+        <img src="./images/logo.svg" alt="Nixxsol" width="216" height="51" loading="lazy" class="logo__image">
+      </a>
+      <nav class="header__menu hidden-mobile">
+        <ul class="header__menu-list">
+          <li class="header__menu-item">
+            <a href="/" class="header__menu-link">About</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="/" class="header__menu-link">
+              <span>IT Services</span>
+              <span class="header__menu-link-icon">
+                <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.5 4.97217L6.5 7.97217L9.5 4.97217" stroke="white" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li class="header__menu-item">
+            <a href="/" class="header__menu-link">Portfolio</a>
+          </li>
+        </ul>
+        <button class="header__menu-button button">
+          Contact Us
+        </button>
+      </nav>
+
+      <button class="header__burger-menu-button burger-button visible-mobile" type="button"
+        onclick="mobileOverlay.showModal()">
+        <span class="visually-hidden">Open navigation menu</span>
+      </button>
+
+    </div>
+  </header>
+  <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+    <form class="mobile-overlay__close-button-wrapper" method="dialog">
+      <button class="mobile-overlay__close-button cross-button" type="submit">
+        <span class="visually-hidden">Close navigation menu</span>
+      </button>
+    </form>
+    <div class="mobile-overlay__body">
+      <ul class="mobile-overlay__list">
+        <li class="mobile-overlay__item">
+          <a href="/" class="mobile-overlay__link">About</a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a href="/" class="mobile-overlay__link">IT Services</a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a href="/" class="mobile-overlay__link">Portfolio</a>
+        </li>
+      </ul>
+    </div>
+  </dialog>
 </body>
 
 </html>
