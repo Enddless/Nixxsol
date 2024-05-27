@@ -4,9 +4,17 @@
   gap: 30px;
   min-height: 447px;
 
+  @include desktop {
+    flex-direction: column;
+    min-height: auto;
+  }
+
   &__body {
-    max-width: 559px;
     position: relative;
+
+    @include desktop-above {
+      max-width: 559px;
+    }
   }
 
   &__title {
@@ -27,10 +35,16 @@
     scroll-snap-type: x mandatory;
     overflow-x: scroll;
     column-gap: 20px;
-    // width: 100%;
     position: absolute;
     right: 0;
-    max-width: 873px;
+
+    @include large-above {
+      max-width: 873px;
+    }
+
+    @include large {
+      position: relative;
+    }
 
     &::-webkit-scrollbar {
       display: none;
@@ -43,16 +57,34 @@
 
     & img {
       max-width: 650px;
+
+      @include tablet {
+        max-width: 550px;
+        height: auto;
+      }
+
+      @include mobile {
+        max-width: 300px;
+      }
     }
   }
 
   &__group-buttons {
-    position: absolute;
-    bottom: -20px;
-    right: -230px;
-    z-index: 10;
     display: flex;
     column-gap: 15px;
+
+    @include desktop-above {
+      position: absolute;
+      bottom: -20px;
+      right: -230px;
+      z-index: 10;
+    }
+
+    @include desktop {
+      position: static;
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
   }
 
   &__group-button {
@@ -65,8 +97,8 @@
     &-next {
       --portfolioIconColor: var(--color-light);
 
-      width: 50px;
-      height: 50px;
+      @include square(50px);
+
       background-color: var(--color-accent);
       border-radius: 50%;
 
