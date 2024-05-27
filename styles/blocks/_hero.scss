@@ -1,0 +1,33 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  @include mobile {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    line-height: 1.06;
+    background: linear-gradient(140deg, #242424 0%, #e92129 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__image {
+    @include desktop {
+      max-width: 65%;
+      height: auto;
+    }
+
+    @include tablet {
+      max-width: 40%;
+    }
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+}

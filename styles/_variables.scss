@@ -7,7 +7,8 @@
   --color-accent: #e92129;
   --color-accent-alt: #e4252c;
 
-  --border: 1px solid #fff;
+  --border: 1px solid var(--color-light);
+  --border-dark: 1px solid var(--color-gray-alt);
 
   --border-radius-small: 5px;
   --border-radius-medium: 12px;
@@ -16,12 +17,12 @@
   --shadow-base: 0 12px 38px 0 rgba(0, 0, 0, 0.05);
   --shadow-alt: 0 4px 32px 0 rgba(0, 0, 0, 0.1);
 
-  --font-family-base: 'ProximaNova', 'Roboto' sans-serif;
+  --font-family-base: 'ProximaNova', 'Roboto', sans-serif;
 
   --container-width: 1200px;
   --container-padding-x: 20px;
 
-  --section-padding-y: 135px;
+  --section-padding-y: 67px;
 
   --input-height: 42px;
   --button-height: 52px;

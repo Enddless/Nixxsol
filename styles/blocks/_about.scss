@@ -1,0 +1,74 @@
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  &__title {
+    line-height: 1.06;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 33px;
+    text-align: justify;
+    width: 100%;
+
+    @include tablet-above {
+      max-width: 697px;
+    }
+  }
+
+  &__subtitle {
+    font-size: clamp(1.5rem, 1.344rem + 0.69vw, 2rem);
+    color: var(--color-dark);
+    line-height: 1.19;
+  }
+
+  &__description {
+    font-size: clamp(1.125rem, 1.086rem + 0.17vw, 1.25rem);
+    line-height: 1.4;
+  }
+
+  &__list {
+    @include mobile {
+      justify-items: center;
+    }
+  }
+  &__item {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      width: 100%;
+      border-radius: var(--border-radius-small);
+      box-shadow: var(--shadow-base);
+    }
+
+    &-number {
+      font-size: clamp(1.875rem, 1.484rem + 1.74vw, 3.125rem);
+      font-weight: 700;
+      line-height: 0.8;
+      color: var(--color-dark);
+
+      @include mobile {
+        text-align: center;
+      }
+
+      &::after {
+        content: '+';
+        color: var(--color-accent-alt);
+      }
+    }
+
+    &-text {
+      font-size: 16px;
+    }
+  }
+}
