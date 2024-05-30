@@ -33,7 +33,7 @@
   }
 
   &-services {
-    background: url('./images/services/services-bg.svg') no-repeat;
+    background: url('../images/services/services-bg.svg') no-repeat;
     background-size: cover;
 
     & .section__header {
@@ -53,7 +53,7 @@
   }
 
   &-contact-us {
-    background: url('./images/meeting/meeting-bg.svg') no-repeat;
+    background: url('../images/meeting/meeting-bg.svg') no-repeat;
     background-size: cover;
     color: var(--color-light);
 
