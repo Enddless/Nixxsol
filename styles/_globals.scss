@@ -5,6 +5,7 @@ body {
   line-height: 1.28;
   color: var(--color-dark);
   background-color: var(--color-light);
+  user-select: none;
 }
 
 a,
@@ -30,12 +31,38 @@ h4 {
   font-weight: 700;
 }
 
-h1,
-.h1 {
+h1 {
   font-size: clamp(1.875rem, 0.801rem + 4.77vw, 5.313rem);
 }
 
-h2,
-.h2 {
+h2 {
   font-size: clamp(1.563rem, 0.488rem + 4.77vw, 5rem);
+}
+h3 {
+  font-size: clamp(1.25rem, 1.065rem + 0.92vw, 1.938rem);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-accent);
+  height: 4px;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-gray);
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-horizontal {
+  height: 4px;
+  background-color: transparent;
 }

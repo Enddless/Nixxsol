@@ -1,13 +1,11 @@
-.partners {
-  background-color: var(--color-dark-alt);
-  min-height: 173px;
-
+.standards {
   &__list {
-    justify-items: center;
     column-gap: 25px;
+    padding-block: 100px;
+    justify-items: center;
 
     @include tablet {
-      --gridColumns: 3;
+      --gridColumns: 2;
 
       grid-template-columns: repeat(var(--gridColumns), 1fr);
       gap: 15px;
@@ -18,6 +16,13 @@
 
       grid-template-columns: repeat(var(--gridColumns), 1fr);
       justify-items: center;
+    }
+  }
+
+  &__item {
+    & img {
+      width: 100%;
+      height: auto;
     }
   }
 }

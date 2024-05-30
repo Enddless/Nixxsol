@@ -4,4 +4,84 @@
   &--hidden-x {
     overflow-x: hidden;
   }
+
+  &__title {
+    line-height: 1.06;
+  }
+  &__description {
+    margin-bottom: 27px;
+  }
+
+  &-about,
+  &-portfolio,
+  &-reviews {
+    display: flex;
+
+    @include large {
+      flex-direction: column;
+      row-gap: 40px;
+    }
+
+    & .section__header {
+      max-width: 462px;
+    }
+  }
+
+  &-about {
+    align-items: start;
+    column-gap: 10px;
+  }
+
+  &-services {
+    background: url(../../images/services/services-bg.svg) no-repeat;
+    background-size: cover;
+
+    & .section__header {
+      max-width: 100%;
+    }
+
+    & .section__title {
+      color: var(--color-accent);
+      margin-bottom: 59px;
+      text-align: center;
+      line-height: 1em;
+    }
+  }
+  &-reviews {
+    padding-block: 130px;
+    min-height: 800px;
+  }
+
+  &-contact-us {
+    background: url(../../images/meeting/meeting-bg.svg) no-repeat;
+    background-size: cover;
+    color: var(--color-light);
+
+    & .section__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 30px;
+
+      @include tablet {
+        flex-direction: column;
+      }
+
+      @include mobile {
+        align-items: stretch;
+      }
+    }
+    & .section__header {
+      @include tablet {
+        text-align: center;
+      }
+    }
+    & .section__title {
+      font-weight: 700;
+    }
+
+    & .section__description {
+      opacity: 0.7;
+    }
+  }
 }
