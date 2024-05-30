@@ -461,7 +461,7 @@ svg * {
           column-gap: 10px;
 }
 .section-services {
-  background: url("https://enddless.github.io/nixxsol/images/services/services-bg.svg") no-repeat;
+  background: url("https://enddless.github.io/nixxsol/images/services-bg.svg") no-repeat;
   background-size: cover;
 }
 .section-services .section__header {
@@ -478,7 +478,7 @@ svg * {
   min-height: 800px;
 }
 .section-contact-us {
-  background: url("https://enddless.github.io/nixxsol/images/meeting/meeting-bg.svg") no-repeat;
+  background: url("https://enddless.github.io/nixxsol/images/meeting-bg.svg") no-repeat;
   background-size: cover;
   color: var(--color-light);
 }
